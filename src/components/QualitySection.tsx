@@ -64,7 +64,7 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-7 h-60 sm:h-72 lg:h-80 relative overflow-hidden">
               <img
-                src="/assets/feed_quality_lab.jpg"
+                src={`${import.meta.env.BASE_URL}assets/feed_quality_lab.jpg`}
                 alt={
                   lang === 'ar'
                     ? 'مختبر فحص ومطابقة جودة أعلاف الكوثر'

@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Banner */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <img
-          src="/assets/factory_banner.jpg"
+          src={`${import.meta.env.BASE_URL}assets/factory_banner.jpg`}
           alt={
             lang === 'ar'
               ? 'مصنع بحار الجوبة لتجارة وتوريد أعلاف الكوثر'

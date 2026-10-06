@@ -93,7 +93,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden border border-[#EBDCF0] shadow-lg shadow-purple-100/40 group bg-white">
               <img
-                src="/assets/feed_supply_logistics.jpg"
+                src={`${import.meta.env.BASE_URL}assets/feed_supply_logistics.jpg`}
                 alt={
                   lang === 'ar'
                     ? 'مركز التوريد والتصنيع والخدمات اللوجستية – مصنع بحار الجوبة'

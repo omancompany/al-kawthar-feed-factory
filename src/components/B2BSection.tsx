@@ -91,7 +91,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
 
             <div className="lg:col-span-5 relative min-h-[220px] sm:min-h-[260px] overflow-hidden border-t lg:border-t-0 lg:border-s border-[#EBDCF0]">
               <img
-                src="/assets/feed_supply_logistics.jpg"
+                src={`${import.meta.env.BASE_URL}assets/feed_supply_logistics.jpg`}
                 alt={
                   lang === 'ar'
                     ? 'مركز التوريد والخدمات اللوجستية والشحن – مصنع بحار الجوبة'
