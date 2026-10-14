@@ -27,9 +27,9 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
 
   const audienceIcons = [Store, Truck, Tractor];
   const roleBadgeStyles = [
-    'bg-purple-50 text-[#8E4A96] border-purple-200',
-    'bg-pink-50 text-[#D9487C] border-pink-200',
-    'bg-[#FAF0FA] text-[#7E3E8A] border-[#EBDCF0]',
+    'bg-purple-50 text-[#302578] border-purple-200',
+    'bg-pink-50 text-[#B8577B] border-pink-200',
+    'bg-[#FAF0FA] text-[#302578] border-[#EBDCF0]',
   ];
 
   return (
@@ -40,16 +40,16 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-10 text-start">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#FAF4FC] text-[#7E3E8A] text-xs font-bold mb-3 border border-[#EBDCF0]">
-            <Layers className="w-3.5 h-3.5 text-[#8E4A96]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#FFF5F7] text-[#302578] text-xs font-bold mb-3 border border-[#EBDCF0]">
+            <Layers className="w-3.5 h-3.5 text-[#302578]" />
             <span>
               {lang === 'ar' ? 'قطاع الأعمال والتوريد B2B' : 'B2B Enterprise Supply'}
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold heading-font text-[#3B1C48] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold heading-font text-[#302578] tracking-tight">
             {t.b2b.title}
           </h2>
-          <p className="text-sm text-[#5A4565] mt-1 font-normal">
+          <p className="text-sm text-[#66627b] mt-1 font-normal">
             {t.b2b.subtitle}
           </p>
         </div>
@@ -57,33 +57,33 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
         {/* Business Message Box */}
         <div
           id="b2b-business-message-box"
-          className="relative bg-gradient-to-r from-[#FAF0FA] via-[#FDF5F8] to-[#F5EBF7] text-[#3B1C48] rounded-3xl border border-[#EBDCF0] shadow-md shadow-purple-100/30 mb-12 text-start overflow-hidden"
+          className="relative bg-gradient-to-r from-[#FAF0FA] via-[#FDF5F8] to-[#F5EBF7] text-[#302578] rounded-3xl border border-[#EBDCF0] shadow-md shadow-purple-100/30 mb-12 text-start overflow-hidden"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 text-[#D9487C] text-xs font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 text-[#B8577B] text-xs font-bold uppercase tracking-wider">
                   <BadgePercent className="w-4 h-4" />
                   <span>
                     {lang === 'ar' ? 'رؤية الشراكة والتعامل التجاري' : 'Partnership Vision'}
                   </span>
                 </div>
-                <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed text-[#3B1C48]">
+                <p className="text-base sm:text-lg md:text-xl font-semibold leading-relaxed text-[#302578]">
                   "{t.b2b.businessMessage}"
                 </p>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#8C7698]">
+              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#827b98]">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="font-semibold text-[#5A4565]">
+                  <span className="font-semibold text-[#66627b]">
                     {lang === 'ar'
                       ? 'جاهزية توريد فورية وشحن لكافة المحافظات'
                       : 'Immediate Supply Readiness Across Oman'}
                   </span>
                 </div>
                 <span>•</span>
-                <span className="text-[#8E4A96] font-semibold">
+                <span className="text-[#302578] font-semibold">
                   {lang === 'ar' ? 'مصنع بحار الجوبة' : 'Bahar Al-Jouba Factory'}
                 </span>
               </div>
@@ -100,13 +100,13 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2E1236]/60 via-transparent to-transparent" />
-              <div className="absolute bottom-3 start-3 end-3 px-3 py-2 rounded-xl bg-white/90 backdrop-blur-xs border border-white/50 text-[11px] font-bold text-[#3B1C48] flex items-center justify-between shadow-xs">
+              <div className="absolute bottom-3 start-3 end-3 px-3 py-2 rounded-xl bg-white/90 backdrop-blur-xs border border-white/50 text-[11px] font-bold text-[#302578] flex items-center justify-between shadow-xs">
                 <span>
                   {lang === 'ar'
                     ? 'مركز التعبئة والتحميل والتوزيع'
                     : 'Packaging, Loading & Distribution'}
                 </span>
-                <span className="text-[#D9487C] font-semibold">
+                <span className="text-[#B8577B] font-semibold">
                   {lang === 'ar' ? 'سناو، عمان' : 'Sinaw, Oman'}
                 </span>
               </div>
@@ -117,7 +117,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
         {/* 3 Audiences Grid */}
         <div className="mb-12">
           <div className="text-start mb-6">
-            <h3 className="text-lg sm:text-xl font-bold text-[#3B1C48] heading-font">
+            <h3 className="text-lg sm:text-xl font-bold text-[#302578] heading-font">
               {t.b2b.audienceTitle}
             </h3>
           </div>
@@ -135,7 +135,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-11 h-11 rounded-xl bg-[#FAF4FC] text-[#8E4A96] flex items-center justify-center border border-[#F0E2F3]">
+                      <div className="w-11 h-11 rounded-xl bg-[#FFF5F7] text-[#302578] flex items-center justify-center border border-[#F0E2F3]">
                         <AudienceIcon className="w-5 h-5" />
                       </div>
                       <span className={`text-[11px] font-bold px-2.5 py-1 rounded-md border ${badgeStyle}`}>
@@ -143,18 +143,18 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                       </span>
                     </div>
 
-                    <h4 className="text-lg font-bold text-[#3B1C48] heading-font mb-2">
+                    <h4 className="text-lg font-bold text-[#302578] heading-font mb-2">
                       {audience.title}
                     </h4>
 
-                    <p className="text-xs sm:text-sm text-[#5A4565] leading-relaxed mb-5 font-normal">
+                    <p className="text-xs sm:text-sm text-[#66627b] leading-relaxed mb-5 font-normal">
                       {audience.description}
                     </p>
 
                     <div className="space-y-2 pt-2 border-t border-[#F2E5F5]">
                       {audience.features.map((feat, fIdx) => (
-                        <div key={fIdx} className="flex items-center gap-2 text-xs text-[#5A4565] font-medium">
-                          <CircleCheck className="w-3.5 h-3.5 text-[#D9487C] shrink-0" />
+                        <div key={fIdx} className="flex items-center gap-2 text-xs text-[#66627b] font-medium">
+                          <CircleCheck className="w-3.5 h-3.5 text-[#B8577B] shrink-0" />
                           <span>{feat}</span>
                         </div>
                       ))}
@@ -164,7 +164,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                   <div className="mt-6 pt-3 border-t border-[#F2E5F5]">
                     <button
                       onClick={onOpenConsultationModal}
-                      className="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#7E3E8A] bg-[#FAF4FC] hover:bg-[#F3E5F6] border border-[#EBDCF0] transition-colors flex items-center justify-center gap-1.5"
+                      className="w-full py-2.5 px-3 rounded-lg text-xs font-bold text-[#302578] bg-[#FFF5F7] hover:bg-[#F3E5F6] border border-[#EBDCF0] transition-colors flex items-center justify-center gap-1.5"
                     >
                       <span>
                         {lang === 'ar' ? 'طلب تفاصيل التوريد' : 'Supply Terms Inquiry'}
@@ -181,12 +181,12 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
         {/* Bottom Banner */}
         <div className="bg-white rounded-2xl p-6 sm:p-8 border border-[#EBDCF0] shadow-md shadow-purple-100/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-start">
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#3B1C48] heading-font">
+            <h3 className="text-lg sm:text-xl font-bold text-[#302578] heading-font">
               {lang === 'ar'
                 ? 'هل تبحث عن عقد توريد مستقر لمنشأتك التجارية؟'
                 : 'Looking for a stable supply contract for your business?'}
             </h3>
-            <p className="text-xs sm:text-sm text-[#5A4565] mt-1">
+            <p className="text-xs sm:text-sm text-[#66627b] mt-1">
               {lang === 'ar'
                 ? 'فريق مبيعات مصنع بحار الجوبة جاهز لتقديم أفضل عروض الأسعار وجداول الشحن.'
                 : 'Bahar Al-Jouba sales team is ready to provide competitive quotes and delivery schedules.'}
@@ -197,7 +197,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
             <button
               id="b2b-consultation-cta-btn"
               onClick={onOpenConsultationModal}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#E13B6B] to-[#D8265D] hover:from-[#D8265D] hover:to-[#B8194B] shadow-md shadow-pink-200/50 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#302578] to-[#302578] hover:from-[#302578] hover:to-[#251b63] shadow-md shadow-pink-200/50 transition-all"
             >
               <CalendarCheck className="w-4 h-4 text-white" />
               <span>{t.b2b.cta}</span>
@@ -205,9 +205,9 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
             <button
               id="b2b-contact-cta-btn"
               onClick={onNavigateContact}
-              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm text-[#D8265D] bg-[#FFF2F6] hover:bg-[#FFE6EE] border border-[#FAD3E1] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm text-[#302578] bg-[#FFF2F6] hover:bg-[#FFE6EE] border border-[#FAD3E1] transition-colors"
             >
-              <Mail className="w-4 h-4 text-[#D8265D]" />
+              <Mail className="w-4 h-4 text-[#302578]" />
               <span>{t.b2b.instantContact}</span>
             </button>
           </div>

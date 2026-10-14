@@ -10,8 +10,8 @@ export const FeedBagVisual: React.FC<FeedBagVisualProps> = ({
   showTechnicalSpecs = true,
 }) => {
   return (
-    <div id="feed-bag-visual-container" className={`relative flex flex-col items-center select-none ${className}`}>
-      <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[9/16] rounded-2xl shadow-2xl overflow-hidden border-2 border-slate-300/80 bg-[#E64375] transition-transform duration-300 hover:scale-[1.01]">
+    <div className={`feed-bag-visual relative flex flex-col items-center select-none ${className}`}>
+      <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[9/16] rounded-2xl shadow-2xl overflow-hidden border-2 border-slate-300/80 bg-[#F2B1BF] transition-transform duration-300 hover:scale-[1.01]">
         {/* Weave texture overlay */}
         <div
           className="absolute inset-0 opacity-15 pointer-events-none"
@@ -35,61 +35,7 @@ export const FeedBagVisual: React.FC<FeedBagVisualProps> = ({
               أعــــلاف
             </div>
             <div className="w-28 sm:w-32 h-24 sm:h-28 relative flex flex-col items-center justify-center">
-              <svg viewBox="0 0 160 140" className="w-full h-full text-[#1E255E]" fill="currentColor">
-                <path
-                  d="M 20 100 A 60 60 0 0 1 140 100"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="7"
-                />
-                <path
-                  d="M 80 40 Q 80 25 80 20 M 80 30 Q 65 25 55 30 M 80 30 Q 95 25 105 30 M 80 38 Q 60 40 50 48 M 80 38 Q 100 40 110 48"
-                  stroke="currentColor"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-                <ellipse cx="50" cy="28" rx="6" ry="3" transform="rotate(-20 50 28)" />
-                <ellipse cx="110" cy="28" rx="6" ry="3" transform="rotate(20 110 28)" />
-                <ellipse cx="45" cy="48" rx="6" ry="3" transform="rotate(-15 45 48)" />
-                <ellipse cx="115" cy="48" rx="6" ry="3" transform="rotate(15 115 48)" />
-                <ellipse cx="80" cy="18" rx="4" ry="7" />
-                <path d="M 38 88 L 38 78 Q 42 74 48 74 L 54 75 Q 58 73 60 77 L 60 88 L 57 88 L 57 82 L 44 82 L 44 88 Z" />
-                <path d="M 64 88 L 64 80 Q 68 76 74 76 L 78 77 Q 82 76 84 80 L 84 88 L 81 88 L 81 83 L 68 83 L 68 88 Z" />
-                <path d="M 88 88 L 88 78 Q 92 76 96 76 L 100 77 L 102 79 L 102 88 L 99 88 L 99 82 L 91 82 L 91 88 Z" />
-                <path d="M 106 88 L 106 75 Q 110 68 116 70 Q 120 72 122 75 L 126 80 L 126 88 L 122 88 L 122 81 L 110 81 L 110 88 Z" />
-                <line x1="25" y1="89" x2="135" y2="89" stroke="currentColor" strokeWidth="4" />
-                <path
-                  d="M 28 89 L 32 94 M 40 89 L 44 94 M 52 89 L 56 94 M 64 89 L 68 94 M 76 89 L 80 94 M 88 89 L 92 94 M 100 89 L 104 94 M 112 89 L 116 94 M 124 89 L 128 94"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                />
-                <path d="M 15 102 L 145 102 L 138 122 L 22 122 Z" fill="currentColor" />
-                <text
-                  x="80"
-                  y="118"
-                  textAnchor="middle"
-                  fill="#FFFFFF"
-                  fontSize="18"
-                  fontWeight="900"
-                  fontFamily="Cairo, sans-serif"
-                >
-                  الــكــوثــر
-                </text>
-                <rect x="26" y="125" width="108" height="14" rx="2" fill="currentColor" />
-                <text
-                  x="80"
-                  y="136"
-                  textAnchor="middle"
-                  fill="#FFFFFF"
-                  fontSize="8.5"
-                  fontWeight="800"
-                  letterSpacing="1"
-                  fontFamily="sans-serif"
-                >
-                  AL KAWTHER FEEDS
-                </text>
-              </svg>
+              <span className="package-logo-image"><img src={`${import.meta.env.BASE_URL}assets/al-kawther-logo.png`} alt="شعار أعلاف الكوثر" /></span>
             </div>
           </div>
 

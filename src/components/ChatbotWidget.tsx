@@ -379,7 +379,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
           >
             <div className="flex items-center gap-2.5">
               <div className="relative">
-                <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-[#E13B6B] to-[#D8265D] text-white flex items-center justify-center shadow-md">
+                <div className="w-9 h-9 rounded-2xl bg-gradient-to-tr from-[#302578] to-[#302578] text-white flex items-center justify-center shadow-md">
                   <Bot className="w-5 h-5" />
                 </div>
                 <span className="absolute -bottom-0.5 -end-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border-2 border-white" />
@@ -393,7 +393,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                   >
                     {lang === 'ar' ? 'مساعد أعلاف الكوثر' : 'Al Kawther Assistant'}
                   </h4>
-                  <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-[#E13B6B]/15 text-[#E13B6B]">
+                  <span className="text-[10px] px-1.5 py-0.5 rounded-full font-bold bg-[#302578]/15 text-[#302578]">
                     {lang === 'ar' ? 'رد تلقائي' : 'Auto Bot'}
                   </span>
                 </div>
@@ -415,7 +415,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                 className={`p-1.5 rounded-xl transition-all ${
                   isNightMode
                     ? 'bg-[#242C4C] text-amber-300 hover:bg-[#2F3962]'
-                    : 'bg-white text-[#D8265D] hover:bg-[#FFEBF1] border border-[#FAD3E1]'
+                    : 'bg-white text-[#302578] hover:bg-[#FFEBF1] border border-[#FAD3E1]'
                 }`}
                 title={
                   isNightMode
@@ -437,7 +437,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                 className={`p-1.5 rounded-xl transition-colors ${
                   isNightMode
                     ? 'text-slate-400 hover:text-white hover:bg-[#242C4C]'
-                    : 'text-[#1E255E]/60 hover:text-[#D8265D] hover:bg-[#FFF2F6]'
+                    : 'text-[#1E255E]/60 hover:text-[#302578] hover:bg-[#FFF2F6]'
                 }`}
                 title={lang === 'ar' ? 'إعادة ضبط المحادثة' : 'Reset Conversation'}
               >
@@ -450,7 +450,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                 className={`p-1.5 rounded-xl transition-colors ${
                   isNightMode
                     ? 'text-slate-400 hover:text-white hover:bg-[#242C4C]'
-                    : 'text-[#1E255E]/60 hover:text-[#D8265D] hover:bg-[#FFF2F6]'
+                    : 'text-[#1E255E]/60 hover:text-[#302578] hover:bg-[#FFF2F6]'
                 }`}
                 title={lang === 'ar' ? 'إغلاق' : 'Close'}
               >
@@ -474,7 +474,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                   className={`flex gap-2 ${isBot ? 'justify-start' : 'justify-end'}`}
                 >
                   {isBot && (
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#E13B6B] to-[#D8265D] text-white flex items-center justify-center shrink-0 mt-1 shadow-xs">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#302578] to-[#302578] text-white flex items-center justify-center shrink-0 mt-1 shadow-xs">
                       <Bot className="w-3.5 h-3.5" />
                     </div>
                   )}
@@ -485,7 +485,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                         ? isNightMode
                           ? 'bg-[#1B2138] text-slate-100 border border-[#2D365A]'
                           : 'bg-white text-[#1E255E] border border-[#FAD3E1]'
-                        : 'bg-gradient-to-r from-[#E13B6B] to-[#D8265D] text-white font-medium'
+                        : 'bg-gradient-to-r from-[#302578] to-[#302578] text-white font-medium'
                     }`}
                   >
                     <p className="whitespace-pre-line leading-relaxed">{msg.text}</p>
@@ -496,8 +496,8 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                           onClick={() => msg.action && handleActionClick(msg.action)}
                           className={`w-full py-1.5 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-xs ${
                             isNightMode
-                              ? 'bg-[#E13B6B] hover:bg-[#D8265D] text-white'
-                              : 'bg-gradient-to-r from-[#E13B6B] to-[#D8265D] text-white hover:opacity-95'
+                              ? 'bg-[#302578] hover:bg-[#302578] text-white'
+                              : 'bg-gradient-to-r from-[#302578] to-[#302578] text-white hover:opacity-95'
                           }`}
                         >
                           <FileSpreadsheet className="w-3.5 h-3.5" />
@@ -531,7 +531,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
             {/* Typing indicator */}
             {isTyping && (
               <div className="flex gap-2 justify-start items-center">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#E13B6B] to-[#D8265D] text-white flex items-center justify-center shrink-0">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-[#302578] to-[#302578] text-white flex items-center justify-center shrink-0">
                   <Bot className="w-3.5 h-3.5" />
                 </div>
                 <div
@@ -541,10 +541,10 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                       : 'bg-white border-[#FAD3E1] text-[#1E255E]'
                   }`}
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E13B6B] animate-bounce" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E13B6B] animate-bounce [animation-delay:0.2s]" />
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E13B6B] animate-bounce [animation-delay:0.4s]" />
-                  <span className="text-[11px] text-[#E13B6B] font-medium ms-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#302578] animate-bounce" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#302578] animate-bounce [animation-delay:0.2s]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#302578] animate-bounce [animation-delay:0.4s]" />
+                  <span className="text-[11px] text-[#302578] font-medium ms-1">
                     {lang === 'ar' ? 'جاري الرد...' : 'Replying...'}
                   </span>
                 </div>
@@ -568,8 +568,8 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
                 onClick={() => handleFaqClick(faq)}
                 className={`whitespace-nowrap px-2.5 py-1 rounded-full text-[11px] font-medium transition-colors shrink-0 ${
                   isNightMode
-                    ? 'bg-[#1E2540] text-slate-300 hover:bg-[#E13B6B] hover:text-white border border-[#2D365A]'
-                    : 'bg-white text-[#1E255E] hover:bg-[#FFEBF1] hover:text-[#D8265D] border border-[#FAD3E1]'
+                    ? 'bg-[#1E2540] text-slate-300 hover:bg-[#302578] hover:text-white border border-[#2D365A]'
+                    : 'bg-white text-[#1E255E] hover:bg-[#FFEBF1] hover:text-[#302578] border border-[#FAD3E1]'
                 }`}
               >
                 {faq.q}
@@ -600,14 +600,14 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
               }
               className={`flex-1 px-3 py-2 text-xs rounded-xl outline-none transition-all ${
                 isNightMode
-                  ? 'bg-[#0E1220] border border-[#2D365A] text-white focus:border-[#E13B6B]'
-                  : 'bg-[#FFF5F8] border border-[#FAD3E1] text-[#1E255E] focus:border-[#E13B6B] focus:bg-white'
+                  ? 'bg-[#0E1220] border border-[#2D365A] text-white focus:border-[#302578]'
+                  : 'bg-[#FFF5F8] border border-[#FAD3E1] text-[#1E255E] focus:border-[#302578] focus:bg-white'
               }`}
             />
             <button
               type="submit"
               disabled={!inputValue.trim()}
-              className="p-2 rounded-xl bg-gradient-to-r from-[#E13B6B] to-[#D8265D] hover:from-[#D8265D] hover:to-[#B8194B] text-white disabled:opacity-40 transition-all shadow-xs"
+              className="p-2 rounded-xl bg-gradient-to-r from-[#302578] to-[#302578] hover:from-[#302578] hover:to-[#251b63] text-white disabled:opacity-40 transition-all shadow-xs"
               title={lang === 'ar' ? 'إرسال' : 'Send'}
             >
               <Send className="w-4 h-4" />
@@ -620,8 +620,8 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
       <button
         id="chatbot-floating-trigger"
         onClick={isOpen ? () => setIsOpen(false) : handleOpenChat}
-        className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-[#E13B6B] to-[#D8265D] hover:from-[#D8265D] hover:to-[#B8194B] text-white shadow-xl shadow-pink-300/50 hover:shadow-2xl transition-all transform hover:scale-105"
-        aria-label="Open Al Kawther Automated Chatbot"
+        className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-[#302578] to-[#302578] hover:from-[#302578] hover:to-[#251b63] text-white shadow-xl shadow-pink-300/50 hover:shadow-2xl transition-all transform hover:scale-105"
+        aria-label={lang === 'ar' ? (isOpen ? 'إغلاق المساعد' : 'تحدث مع مساعد الكوثر') : (isOpen ? 'Close chat assistant' : 'Chat with Al Kawther')}
       >
         <div className="relative">
           <Bot className="w-5 h-5 fill-current" />

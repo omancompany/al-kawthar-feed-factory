@@ -19,21 +19,21 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
     {
       id: 'quality-production',
       icon: ShieldCheck,
-      color: 'text-[#8E4A96]',
+      color: 'text-[#302578]',
       bg: 'bg-purple-50',
       border: 'border-purple-200',
     },
     {
       id: 'supply-stability',
       icon: Truck,
-      color: 'text-[#D9487C]',
+      color: 'text-[#B8577B]',
       bg: 'bg-pink-50',
       border: 'border-pink-200',
     },
     {
       id: 'economic-value',
       icon: TrendingUp,
-      color: 'text-[#8E4A96]',
+      color: 'text-[#302578]',
       bg: 'bg-[#F9EEFA]',
       border: 'border-[#EADBF0]',
     },
@@ -42,19 +42,19 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
   return (
     <section
       id="quality"
-      className="py-16 lg:py-20 bg-gradient-to-b from-[#F9EEFA] via-[#FCF5FD] to-white text-[#3B1C48] relative overflow-hidden border-b border-[#EBDCF0]"
+      className="py-16 lg:py-20 bg-gradient-to-b from-[#F9EEFA] via-[#FCF5FD] to-white text-[#302578] relative overflow-hidden border-b border-[#EBDCF0]"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-10 text-start">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/90 text-[#7E3E8A] text-xs font-bold mb-3 border border-[#EBDCF0] shadow-2xs">
-            <Factory className="w-3.5 h-3.5 text-[#8E4A96]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/90 text-[#302578] text-xs font-bold mb-3 border border-[#EBDCF0] shadow-2xs">
+            <Factory className="w-3.5 h-3.5 text-[#302578]" />
             <span>{t.quality.title}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold heading-font tracking-tight text-[#3B1C48]">
+          <h2 className="text-2xl sm:text-3xl font-extrabold heading-font tracking-tight text-[#302578]">
             {t.quality.subtitle}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[#5A4565] leading-relaxed max-w-2xl font-normal">
+          <p className="mt-3 text-sm sm:text-base text-[#66627b] leading-relaxed max-w-2xl font-normal">
             {t.quality.mainMessage}
           </p>
         </div>
@@ -75,8 +75,8 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#2E1236]/70 via-transparent to-transparent lg:hidden" />
             </div>
 
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#FAF5FC] to-white p-6 sm:p-8 flex flex-col justify-center text-start border-t lg:border-t-0 lg:border-s border-[#EBDCF0]">
-              <div className="inline-flex items-center gap-2 text-[#D9487C] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#FFF5F7] to-white p-6 sm:p-8 flex flex-col justify-center text-start border-t lg:border-t-0 lg:border-s border-[#EBDCF0]">
+              <div className="inline-flex items-center gap-2 text-[#B8577B] text-xs font-bold uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4" />
                 <span>
                   {lang === 'ar' ? 'معايير عمل مسؤولة' : 'Committed Standards'}
@@ -84,20 +84,20 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
               </div>
               <div
                 id="quality-strong-statement"
-                className="text-xl sm:text-2xl font-black heading-font text-[#3B1C48] leading-snug mb-3"
+                className="text-xl sm:text-2xl font-black heading-font text-[#302578] leading-snug mb-3"
               >
                 "{t.quality.strongStatement}"
               </div>
-              <p className="text-xs sm:text-sm text-[#5A4565] leading-relaxed font-normal">
+              <p className="text-xs sm:text-sm text-[#66627b] leading-relaxed font-normal">
                 {lang === 'ar'
                   ? 'يرتكز مصنع بحار الجوبة على التزام نوعي بمعايير التعبئة والجودة، موفراً أعلافاً تلبي أعلى درجات الثبات والاعتمادية للتجار والمربين ومنافذ التوزيع.'
                   : 'Bahar Al-Jouba maintains strict commitment to quality packaging and reliability, supplying dependable feeds to merchants and livestock breeders.'}
               </p>
-              <div className="mt-5 pt-4 border-t border-[#F0E0F3] flex items-center justify-between text-xs text-[#8C7698]">
-                <span className="font-semibold text-[#5A4565]">
+              <div className="mt-5 pt-4 border-t border-[#F0E0F3] flex items-center justify-between text-xs text-[#827b98]">
+                <span className="font-semibold text-[#66627b]">
                   {lang === 'ar' ? 'مصنع بحار الجوبة' : 'Bahar Al-Jouba'}
                 </span>
-                <span className="text-[#D9487C] font-semibold">
+                <span className="text-[#B8577B] font-semibold">
                   {lang === 'ar' ? 'معايير توريد معتمدة' : 'Reliable Supply'}
                 </span>
               </div>
@@ -122,14 +122,14 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
                   >
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#3B1C48] heading-font mb-2">
+                  <h3 className="text-lg font-bold text-[#302578] heading-font mb-2">
                     {block.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#5A4565] leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#66627b] leading-relaxed font-normal">
                     {block.description}
                   </p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[#F2E5F5] flex items-center justify-between text-xs text-[#8C7698]">
+                <div className="mt-5 pt-3 border-t border-[#F2E5F5] flex items-center justify-between text-xs text-[#827b98]">
                   <span>{lang === 'ar' ? 'ركيزة عمل' : 'Core Pillar'}</span>
                   <span className="font-mono text-[#A894B2]">0{index + 1}</span>
                 </div>
