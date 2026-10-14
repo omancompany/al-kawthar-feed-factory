@@ -66,7 +66,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFF6F9] text-[#1E255E] flex flex-col font-arabic selection:bg-pink-200 selection:text-[#B8194B]">
+    <div className="min-h-screen bg-[#FFF9FA] text-[#1E255E] flex flex-col font-arabic selection:bg-pink-200 selection:text-[#B8194B]">
       <Header
         lang={lang}
         onToggleLang={toggleLang}
@@ -75,6 +75,7 @@ export default function App() {
         onOpenContactModal={() => handleNavigate('contact')}
       />
 
+      <a href="#home" className="skip-link">{lang === 'ar' ? 'انتقل إلى المحتوى' : 'Skip to content'}</a>
       <main className="flex-grow">
         <Hero
           lang={lang}
