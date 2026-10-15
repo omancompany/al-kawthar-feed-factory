@@ -6,3 +6,10 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Generated only from approved build configuration
+src/generated/contact.json
+public/robots.txt
+public/sitemap.xml
+
+public/privacy.html
