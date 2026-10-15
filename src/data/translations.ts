@@ -1,3 +1,4 @@
+import {contact} from '../contact-config';
 export interface TranslationContent {
   nav: {
     home: string;
@@ -239,7 +240,7 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
       "shelfLife": "صالح لمدة 6 أشهر من تاريخ الإنتاج",
       "storage": "يحفظ في مكان جاف ومظلل بعيداً عن الرطوبة والشمس",
       "customerService": "خدمة العملاء: دعم مستمر واستجابة فورية",
-      "email": "alkawthercattlefeed@gmail.com",
+      "email": contact.email,
       "targetAnimals": "مناسب لجميع المجترات: الأبقار، الإبل، الأغنام، والماعز",
       "details": [
         "تركيبة غذائية متوازنة تدعم النشاط والصحة العامة للقطيع",
@@ -312,7 +313,7 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
         }
       ],
       "cta": "تواصل لطلب عرض أسعار",
-      "instantContact": "محادثة عبر واتساب"
+      "instantContact": "تواصل مع المبيعات"
     },
     "contact": {
       "title": "تواصل معنا",
@@ -324,13 +325,13 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
       "factoryLabel": "المصنع",
       "factoryValue": "مصنع بحار الجوبة – سناو",
       "addressLabel": "الموقع",
-      "addressValue": "سناو، محافظة شمال الشرقية، سلطنة عمان",
+      "addressValue": contact.addressAr,
       "supportLabel": "خدمة العملاء والدعم التجاري",
       "supportValue": "متاح عبر المراسلة الفورية والبريد الإلكتروني الرسمي",
       "emailLabel": "البريد الإلكتروني المباشر",
-      "emailValue": "alkawthercattlefeed@gmail.com",
+      "emailValue": contact.email,
       "formTitle": "طلب تسعير وتواصل تجاري",
-      "formDesc": "املأ بياناتك وسيتم إرسال الطلب مباشرة إلى البريد الإلكتروني للمتابعة والتواصل معكم سريعاً.",
+      "formDesc": "املأ بياناتك لحفظ طلبك لدى فريق المبيعات والتواصل معك.",
       "fields": {
         "fullName": "الاسم الكريم",
         "fullNamePlaceholder": "أدخل اسمك",
@@ -354,8 +355,8 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
         "messagePlaceholder": "اكتب لنا استفسارك أو موقع التوصيل المطلوب...",
         "submit": "إرسال الطلب عبر البريد",
         "submitting": "جاري الإرسال...",
-        "successTitle": "تم إرسال طلبكم بنجاح",
-        "successMsg": "شكراً لتواصلك معنا! تم إرسال بيانات طلبك إلى البريد الإلكتروني وسيتواصل معك مسؤول المبيعات في أقرب وقت.",
+        "successTitle": "تم حفظ طلبكم بنجاح",
+        "successMsg": "تم حفظ طلبك في قائمة المبيعات للمتابعة. يمكنك التواصل بالبريد أيضًا.",
         "sendWhatsapp": "متابعة عبر واتساب أيضاً"
       },
       "mapHeading": "الموقع الجغرافي",
@@ -466,7 +467,7 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
       "shelfLife": "Valid for 6 months from production date",
       "storage": "Store in a cool, dry place away from sunlight and moisture",
       "customerService": "Customer Support: Instant & Direct Inquiries",
-      "email": "alkawthercattlefeed@gmail.com",
+      "email": contact.email,
       "targetAnimals": "Formulated for all ruminants: Cattle, Camels, Sheep, and Goats",
       "details": [
         "Balanced nutritional profile supporting animal vitality and health",
@@ -539,7 +540,7 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
         }
       ],
       "cta": "Request Quotation",
-      "instantContact": "Chat via WhatsApp"
+      "instantContact": "Contact sales"
     },
     "contact": {
       "title": "Contact Us",
@@ -555,9 +556,9 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
       "supportLabel": "Customer Service & Commercial Support",
       "supportValue": "Available via Live Messaging & Official Email",
       "emailLabel": "Direct Email",
-      "emailValue": "alkawthercattlefeed@gmail.com",
+      "emailValue": contact.email,
       "formTitle": "Inquiry & Quotation Request",
-      "formDesc": "Submit your details and your inquiry will be delivered directly to our email for fast assistance.",
+      "formDesc": "Submit your details to save your inquiry for our sales team.",
       "fields": {
         "fullName": "Full Name",
         "fullNamePlaceholder": "Enter your name",
@@ -581,8 +582,8 @@ export const translations: Record<"ar" | "en", TranslationContent> = {
         "messagePlaceholder": "Write your inquiry or delivery destination...",
         "submit": "Send via Email",
         "submitting": "Sending...",
-        "successTitle": "Inquiry Sent Successfully",
-        "successMsg": "Thank you for reaching out! Your inquiry details have been forwarded to our email and our team will contact you promptly.",
+        "successTitle": "Inquiry Saved Successfully",
+        "successMsg": "Your inquiry is saved in our sales request list for follow-up. You can also contact us by email.",
         "sendWhatsapp": "Follow up on WhatsApp"
       },
       "mapHeading": "Facility Location",
