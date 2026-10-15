@@ -44,6 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               {t.footer.quickLinks}
             </h4>
             <ul className="space-y-2 text-sm text-[#66627b]">
+              <li><a className="hover:underline" href="/privacy.html">{lang === 'ar' ? 'الخصوصية' : 'Privacy'}</a></li>
               <li>
                 <button
                   onClick={() => onNavigate('home')}
