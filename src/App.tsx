@@ -1,3 +1,4 @@
+import { DemoBar, DemoUnavailable, demoRequested, demoEnabled, blockDemoExternal } from './demo-preview';
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -65,8 +66,11 @@ export default function App() {
     }
   };
 
+  if (demoRequested() && !demoEnabled()) return <DemoUnavailable/>;
+
   return (
-    <div className="min-h-screen bg-[#FFF9FA] text-[#1E255E] flex flex-col font-arabic selection:bg-pink-200 selection:text-[#B8194B]">
+    <div onClickCapture={blockDemoExternal} className="min-h-screen bg-[#FFF9FA] text-[#1E255E] flex flex-col font-arabic selection:bg-pink-200 selection:text-[#B8194B]">
+      <DemoBar lang={lang}/>
       <Header
         lang={lang}
         onToggleLang={toggleLang}

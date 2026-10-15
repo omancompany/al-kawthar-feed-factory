@@ -1,3 +1,4 @@
+import { demoRequested } from '../demo-preview';
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Bot,
@@ -153,6 +154,7 @@ export const ChatbotWidget: React.FC<ChatbotWidgetProps> = ({
     if (action.type === 'quote' && onOpenInquiryModal) {
       onOpenInquiryModal();
     } else if (action.type === 'email') {
+      if (demoRequested()) return;
       window.location.href =
         'mailto:alkawthercattlefeed@gmail.com?subject=استفسار%20عن%20أعلاف%20الكوثر';
     } else if (onNavigateContact) {

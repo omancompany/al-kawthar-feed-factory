@@ -1,3 +1,6 @@
+import {contact} from '../contact-config';
+import { demoRequested } from '../demo-preview';
+import { submitInquiry,useWhatsApp } from '../inquiries';
 import React, { useState } from 'react';
 import { translations } from '../data/translations';
 import {
@@ -27,40 +30,20 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting) return;
     setIsSubmitting(true);
-
-    const subject = encodeURIComponent(
-      `طلب تسعير جديد من: ${formData.fullName || 'عميل'} - ${formData.companyName || 'نشاط تجاري'}`
-    );
-
-    const body = encodeURIComponent(
-      `السلام عليكم ورحمة الله وبركاته،
-
-تفاصيل طلب التسعير والتواصل التجاري:
-----------------------------------------
-• الاسم الكريم: ${formData.fullName}
-• اسم المحل / المزرعة / الشركة: ${formData.companyName}
-• رقم الهاتف: ${formData.phone}
-• البريد الإلكتروني للمرسل: ${formData.email || 'غير محدد'}
-• نوع النشاط: ${formData.businessType}
-• الكمية التقريبية المطلوبة: ${formData.quantity || 'غير محددة'}
-• تفاصيل الرسالة وموقع التوصيل:
-${formData.message || 'طلب عرض أسعار وجدول التوريد'}
-----------------------------------------
-تم إرسال هذا الطلب عبر موقع أعلاف الكوثر.`
-    );
-
-    const mailtoUrl = `mailto:alkawthercattlefeed@gmail.com?subject=${subject}&body=${body}`;
-
-    setTimeout(() => {
-      window.location.href = mailtoUrl;
-      setIsSubmitting(false);
+    setError('');
+    try {
+      await submitInquiry('quote', formData.fullName, formData.phone, JSON.stringify(formData, null, 2));
       setIsSuccess(true);
-    }, 400);
+    } catch {
+      setError(lang === 'ar' ? 'تعذر تجهيز أو حفظ الطلب. حاول مرة أخرى أو تواصل معنا.' : 'Unable to prepare or save the request. Retry or contact us.');
+    } finally { setIsSubmitting(false); }
   };
 
   const getEncodedMailBody = () => {
@@ -170,6 +153,11 @@ ${formData.message || 'طلب عرض أسعار وجدول التوريد'}
                 </div>
               </div>
 
+              <div className="mt-5 space-y-2 text-sm">
+                <a className="font-bold underline" href={'tel:+'+contact.phone}><bdi>{'+'+contact.phone}</bdi></a>
+                <p>{lang === 'ar' ? 'بحار الجوبه للتجارة ش.م.م • سجل تجاري 1219471' : 'Bahar Aljba Trading LLC • CR 1219471'}</p>
+                <p>{lang === 'ar' ? 'رقم التعريف الضريبي: 1383870' : 'Tax identification number: 1383870'}</p>
+              </div>
               <div className="mt-8 pt-6 border-t border-[#FAD3E1] flex flex-col gap-3">
                 <a
                   id="contact-mailto-btn"
@@ -192,7 +180,7 @@ ${formData.message || 'طلب عرض أسعار وجدول التوريد'}
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#FFF5F7] text-[#302578] text-xs font-bold mb-2 border border-[#EBDCF0]">
                   <Mail className="w-3.5 h-3.5 text-[#302578]" />
                   <span>
-                    {lang === 'ar' ? 'يرسل مباشرة إلى الإيميل' : 'Direct Email Delivery'}
+                    {lang === 'ar' ? (useWhatsApp?'طلب عبر واتساب':'طلب محفوظ لفريق المبيعات') : (useWhatsApp?'WhatsApp inquiry':'Saved request for our sales team')}
                   </span>
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-[#302578] heading-font">
@@ -208,11 +196,11 @@ ${formData.message || 'طلب عرض أسعار وجدول التوريد'}
                   <div className="flex items-center gap-3 text-[#302578]">
                     <CircleCheckBig className="w-6 h-6 text-[#B8577B] shrink-0" />
                     <h4 className="text-base sm:text-lg font-bold">
-                      {t.contact.fields.successTitle}
+                      {demoRequested() ? (lang === 'ar' ? 'تمت محاكاة الطلب التجريبي' : 'Demo request simulated') : useWhatsApp?(lang==='ar'?'تم تجهيز رسالة واتساب':'WhatsApp message prepared'):t.contact.fields.successTitle}
                     </h4>
                   </div>
                   <p className="text-xs sm:text-sm text-[#66627b] leading-relaxed">
-                    {t.contact.fields.successMsg}
+                    {demoRequested() ? (lang === 'ar' ? 'لم يُحفظ طلب حقيقي ولم تُرسل رسالة لفريق المبيعات.' : 'No real request was stored or sent to sales.') : useWhatsApp?(lang==='ar'?'أرسل الرسالة في واتساب؛ وصولها وتأكيدها مسؤولية فريق المبيعات.':'Send the WhatsApp message and await sales confirmation.'):t.contact.fields.successMsg}
                   </p>
                   <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                     <a
@@ -247,6 +235,11 @@ ${formData.message || 'طلب عرض أسعار وجدول التوريد'}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
+                <label className="flex items-start gap-2 text-xs leading-relaxed">
+                  <input type="checkbox" required className="mt-1" />
+                  <span>{lang === 'ar' ? 'أوافق على حفظ بياناتي للتواصل بخصوص هذا الطلب. ' : 'I agree to store my details to respond to this request. '}<a href="/privacy.html" target="_blank" rel="noreferrer" className="underline">{lang === 'ar' ? 'الخصوصية' : 'Privacy'}</a></span>
+                </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="fullName" className="block text-xs font-bold text-[#66627b] mb-1">
@@ -385,8 +378,8 @@ ${formData.message || 'طلب عرض أسعار وجدول التوريد'}
                     </button>
                     <p className="text-[11px] text-[#827b98] text-center mt-2">
                       {lang === 'ar'
-                        ? 'عند الضغط، سيتم فتح تطبيق البريد لإرسال البيانات مباشرة إلى: alkawthercattlefeed@gmail.com'
-                        : 'Submitting will open your email client addressed to: alkawthercattlefeed@gmail.com'}
+                        ? (useWhatsApp?'تُجهز الرسالة في واتساب؛ أكمل إرسالها بنفسك.':'يُحفظ طلبك لفريق المبيعات بعد تأكيد الإرسال.')
+                        : (useWhatsApp?'A WhatsApp message is prepared; complete sending it yourself.':'Your request is saved for our sales team after confirmation.')}
                     </p>
                   </div>
                 </form>
