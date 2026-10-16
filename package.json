@@ -11,7 +11,9 @@
     "lint": "tsc --noEmit",
     "start": "node server/inquiries.mjs",
     "test": "node --test tests/*.test.mjs",
-    "prebuild": "node scripts/prepare-site.mjs"
+    "prebuild": "node scripts/prepare-site.mjs",
+    "verify:clean-build": "sh scripts/verify-clean-build.sh",
+    "predeploy": "sh scripts/verify-clean-build.sh"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
