@@ -40,7 +40,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </p>
 
             <div className="pt-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#827b98] mb-3 flex items-center gap-1.5">
+              <h3 className="text-xs font-bold uppercase tracking-wider text-[#65566f] mb-3 flex items-center gap-1.5">
                 <Layers className="w-3.5 h-3.5 text-[#302578]" />
                 <span>{t.about.factsTitle}</span>
               </h3>
@@ -51,7 +51,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     key={index}
                     className="p-3.5 rounded-xl bg-[#FFF5F7] border border-[#F0E2F3] flex flex-col justify-center"
                   >
-                    <span className="text-[11px] font-semibold text-[#827b98]">
+                    <span className="text-[11px] font-semibold text-[#65566f]">
                       {fact.label}
                     </span>
                     <span className="text-xs sm:text-sm font-bold text-[#302578] mt-0.5">
@@ -66,7 +66,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <button
                 id="about-learn-products-btn"
                 onClick={() => onNavigate('products')}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#302578] to-[#B8577B] hover:from-[#251b63] hover:to-[#302578] shadow-xs transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-[#302578] to-[#8d3558] hover:from-[#251b63] hover:to-[#302578] shadow-xs transition-all"
               >
                 <span>
                   {lang === 'ar'
@@ -92,7 +92,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           {/* Right Column */}
           <div className="lg:col-span-5">
             <div className="relative rounded-3xl overflow-hidden border border-[#EBDCF0] shadow-lg shadow-purple-100/40 group bg-white">
-              <img
+              <img loading="lazy" decoding="async"
                 src={`${import.meta.env.BASE_URL}assets/feed_supply_logistics.jpg`}
                 alt={
                   lang === 'ar'

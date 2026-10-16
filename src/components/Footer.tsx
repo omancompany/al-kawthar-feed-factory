@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
               <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-white border border-[#EBDCF0] text-[#302578] shadow-2xs">
                 {lang === 'ar' ? 'مصنع بحار الجوبة' : 'Bahar Al-Jouba Factory'}
               </span>
-              <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-white border border-[#EBDCF0] text-[#B8577B] shadow-2xs">
+              <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-white border border-[#EBDCF0] text-[#8d3558] shadow-2xs">
                 {lang === 'ar' ? 'سلطنة عمان' : 'Sultanate of Oman'}
               </span>
             </div>

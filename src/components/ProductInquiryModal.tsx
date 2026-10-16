@@ -84,7 +84,7 @@ export const ProductInquiryModal: React.FC<ProductInquiryModalProps> = ({
         <div className="p-6">
           {isSubmitted ? (
             <div className="py-6 text-center space-y-3">
-              <CircleCheckBig className="w-12 h-12 text-[#B8577B] mx-auto" />
+              <CircleCheckBig className="w-12 h-12 text-[#8d3558] mx-auto" />
               <h4 className="text-lg font-bold text-[#302578]">
                 {lang === 'ar'
                   ? (demoRequested() ? 'تمت محاكاة الطلب التجريبي' : (useWhatsApp?'تم تجهيز رسالة واتساب':'تم حفظ طلبكم بنجاح'))

@@ -194,7 +194,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
               {isSuccess ? (
                 <div className="p-6 rounded-2xl bg-[#FFF5F7] border border-[#EBDCF0] text-start space-y-4">
                   <div className="flex items-center gap-3 text-[#302578]">
-                    <CircleCheckBig className="w-6 h-6 text-[#B8577B] shrink-0" />
+                    <CircleCheckBig className="w-6 h-6 text-[#8d3558] shrink-0" />
                     <h4 className="text-base sm:text-lg font-bold">
                       {demoRequested() ? (lang === 'ar' ? 'تمت محاكاة الطلب التجريبي' : 'Demo request simulated') : useWhatsApp?(lang==='ar'?'تم تجهيز رسالة واتساب':'WhatsApp message prepared'):t.contact.fields.successTitle}
                     </h4>
@@ -243,7 +243,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="fullName" className="block text-xs font-bold text-[#66627b] mb-1">
-                        {t.contact.fields.fullName} <span className="text-[#B8577B]">*</span>
+                        {t.contact.fields.fullName} <span className="text-[#8d3558]">*</span>
                       </label>
                       <input
                         type="text"
@@ -258,7 +258,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
 
                     <div>
                       <label htmlFor="companyName" className="block text-xs font-bold text-[#66627b] mb-1">
-                        {t.contact.fields.companyName} <span className="text-[#B8577B]">*</span>
+                        {t.contact.fields.companyName} <span className="text-[#8d3558]">*</span>
                       </label>
                       <input
                         type="text"
@@ -275,7 +275,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="phone" className="block text-xs font-bold text-[#66627b] mb-1">
-                        {t.contact.fields.phone} <span className="text-[#B8577B]">*</span>
+                        {t.contact.fields.phone} <span className="text-[#8d3558]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -307,7 +307,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="businessType" className="block text-xs font-bold text-[#66627b] mb-1">
-                        {t.contact.fields.businessType} <span className="text-[#B8577B]">*</span>
+                        {t.contact.fields.businessType} <span className="text-[#8d3558]">*</span>
                       </label>
                       <select
                         id="businessType"
@@ -362,7 +362,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                       type="submit"
                       id="submit-contact-form-btn"
                       disabled={isSubmitting}
-                      className="w-full py-3 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#302578] to-[#B8577B] hover:from-[#251b63] hover:to-[#302578] disabled:opacity-50 shadow-md shadow-pink-200/50 transition-all flex items-center justify-center gap-2"
+                      className="w-full py-3 px-6 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-[#302578] to-[#8d3558] hover:from-[#251b63] hover:to-[#302578] disabled:opacity-50 shadow-md shadow-pink-200/50 transition-all flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -376,7 +376,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         </>
                       )}
                     </button>
-                    <p className="text-[11px] text-[#827b98] text-center mt-2">
+                    <p className="text-[11px] text-[#65566f] text-center mt-2">
                       {lang === 'ar'
                         ? (useWhatsApp?'تُجهز الرسالة في واتساب؛ أكمل إرسالها بنفسك.':'يُحفظ طلبك لفريق المبيعات بعد تأكيد الإرسال.')
                         : (useWhatsApp?'A WhatsApp message is prepared; complete sending it yourself.':'Your request is saved for our sales team after confirmation.')}

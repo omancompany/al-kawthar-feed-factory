@@ -26,7 +26,7 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
     {
       id: 'supply-stability',
       icon: Truck,
-      color: 'text-[#B8577B]',
+      color: 'text-[#8d3558]',
       bg: 'bg-pink-50',
       border: 'border-pink-200',
     },
@@ -63,7 +63,7 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
         <div className="relative rounded-3xl overflow-hidden border border-[#EBDCF0] mb-10 shadow-xl shadow-purple-100/30 bg-white">
           <div className="grid grid-cols-1 lg:grid-cols-12">
             <div className="lg:col-span-7 h-60 sm:h-72 lg:h-80 relative overflow-hidden">
-              <img
+              <img loading="lazy" decoding="async"
                 src={`${import.meta.env.BASE_URL}assets/feed_quality_lab.jpg`}
                 alt={
                   lang === 'ar'
@@ -76,7 +76,7 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
             </div>
 
             <div className="lg:col-span-5 bg-gradient-to-br from-[#FFF5F7] to-white p-6 sm:p-8 flex flex-col justify-center text-start border-t lg:border-t-0 lg:border-s border-[#EBDCF0]">
-              <div className="inline-flex items-center gap-2 text-[#B8577B] text-xs font-bold uppercase tracking-wider mb-2">
+              <div className="inline-flex items-center gap-2 text-[#8d3558] text-xs font-bold uppercase tracking-wider mb-2">
                 <Sparkles className="w-4 h-4" />
                 <span>
                   {lang === 'ar' ? 'معايير عمل مسؤولة' : 'Committed Standards'}
@@ -93,11 +93,11 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
                   ? 'يرتكز مصنع بحار الجوبة على التزام نوعي بمعايير التعبئة والجودة، موفراً أعلافاً تلبي أعلى درجات الثبات والاعتمادية للتجار والمربين ومنافذ التوزيع.'
                   : 'Bahar Al-Jouba maintains strict commitment to quality packaging and reliability, supplying dependable feeds to merchants and livestock breeders.'}
               </p>
-              <div className="mt-5 pt-4 border-t border-[#F0E0F3] flex items-center justify-between text-xs text-[#827b98]">
+              <div className="mt-5 pt-4 border-t border-[#F0E0F3] flex items-center justify-between text-xs text-[#65566f]">
                 <span className="font-semibold text-[#66627b]">
                   {lang === 'ar' ? 'مصنع بحار الجوبة' : 'Bahar Al-Jouba'}
                 </span>
-                <span className="text-[#B8577B] font-semibold">
+                <span className="text-[#8d3558] font-semibold">
                   {lang === 'ar' ? 'معايير توريد معتمدة' : 'Reliable Supply'}
                 </span>
               </div>
@@ -129,9 +129,9 @@ export const QualitySection: React.FC<QualitySectionProps> = ({ lang }) => {
                     {block.description}
                   </p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[#F2E5F5] flex items-center justify-between text-xs text-[#827b98]">
+                <div className="mt-5 pt-3 border-t border-[#F2E5F5] flex items-center justify-between text-xs text-[#65566f]">
                   <span>{lang === 'ar' ? 'ركيزة عمل' : 'Core Pillar'}</span>
-                  <span className="font-mono text-[#A894B2]">0{index + 1}</span>
+                  <span className="font-mono text-[#65566f]">0{index + 1}</span>
                 </div>
               </div>
             );

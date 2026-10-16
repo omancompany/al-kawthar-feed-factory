@@ -29,7 +29,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
   const audienceIcons = [Store, Truck, Tractor];
   const roleBadgeStyles = [
     'bg-purple-50 text-[#302578] border-purple-200',
-    'bg-pink-50 text-[#B8577B] border-pink-200',
+    'bg-pink-50 text-[#8d3558] border-pink-200',
     'bg-[#FAF0FA] text-[#302578] border-[#EBDCF0]',
   ];
 
@@ -63,7 +63,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <div className="inline-flex items-center gap-2 text-[#B8577B] text-xs font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 text-[#8d3558] text-xs font-bold uppercase tracking-wider">
                   <BadgePercent className="w-4 h-4" />
                   <span>
                     {lang === 'ar' ? 'رؤية الشراكة والتعامل التجاري' : 'Partnership Vision'}
@@ -74,7 +74,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                 </p>
               </div>
 
-              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#827b98]">
+              <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-[#65566f]">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="font-semibold text-[#66627b]">
@@ -107,7 +107,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                     ? 'مركز التعبئة والتحميل والتوزيع'
                     : 'Packaging, Loading & Distribution'}
                 </span>
-                <span className="text-[#B8577B] font-semibold">
+                <span className="text-[#8d3558] font-semibold">
                   {lang === 'ar' ? 'سناو، عمان' : 'Sinaw, Oman'}
                 </span>
               </div>
@@ -155,7 +155,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
                     <div className="space-y-2 pt-2 border-t border-[#F2E5F5]">
                       {audience.features.map((feat, fIdx) => (
                         <div key={fIdx} className="flex items-center gap-2 text-xs text-[#66627b] font-medium">
-                          <CircleCheck className="w-3.5 h-3.5 text-[#B8577B] shrink-0" />
+                          <CircleCheck className="w-3.5 h-3.5 text-[#8d3558] shrink-0" />
                           <span>{feat}</span>
                         </div>
                       ))}

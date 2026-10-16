@@ -26,7 +26,7 @@ export function Header({ lang, onToggleLang, activeSection, onNavigate, onOpenCo
     <header id="main-header" className="site-header">
       <div className="utility-bar"><div className="page-width"><span><MapPin size={13} />{lang === 'ar' ? 'صناعة عمانية · سناو، شمال الشرقية' : 'Made in Oman · Sinaw, North Al Sharqiyah'}</span><a href="mailto:alkawthercattlefeed@gmail.com">alkawthercattlefeed@gmail.com</a></div></div>
       <div className="navigation-bar page-width">
-        <button id="nav-logo-btn" aria-label={lang === 'ar' ? 'أعلاف الكوثر، الرئيسية' : 'Al Kawther Feeds, home'} onClick={() => navigate('home')}><BrandLogo lang={lang} /></button>
+        <button id="nav-logo-btn" onClick={() => navigate('home')}><BrandLogo lang={lang} /></button>
         <nav id="desktop-nav" aria-label={lang === 'ar' ? 'التنقل الرئيسي' : 'Main navigation'}>{links.map(id => <button key={id} id={`nav-link-${id}`} aria-current={activeSection === id ? 'location' : undefined} className={activeSection === id ? 'is-active' : ''} onClick={() => navigate(id)}>{t.nav[id]}</button>)}</nav>
         <div className="nav-actions">
           <button id="language-switcher-btn" className="language-button" onClick={() => { onToggleLang(); setOpen(false); }} aria-label={lang === 'ar' ? 'Switch to English' : 'التبديل للعربية'}><Globe size={17} /><span>{t.nav.switchLang}</span></button>

@@ -5,7 +5,7 @@ RUN npm ci
 COPY . .
 ARG VITE_BASE=/
 ARG SITE_CONTACT_JSON
-RUN npm test && npm run lint && npm run build
+RUN npm test && npm run build && npm run lint
 FROM node:22-bookworm-slim AS runner
 WORKDIR /app
 COPY --from=builder --chown=node:node /app /app
