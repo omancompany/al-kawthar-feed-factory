@@ -1,0 +1,11 @@
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const robots=readFileSync('dist/robots.txt','utf8');
+const sitemap=readFileSync('dist/sitemap.xml','utf8');
+const privacy=readFileSync('dist/privacy.html','utf8');
+const config=JSON.parse(process.env.SITE_CONTACT_JSON);
+assert.match(robots,/Sitemap:/);
+assert.ok(sitemap.includes(config.siteUrl));
+assert.ok(privacy.includes('lang="ar"')&&privacy.includes('dir="rtl"'));
+assert.ok(privacy.includes(config.privacyText.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')));
+console.log('PASS: generated privacy, robots and sitemap');
