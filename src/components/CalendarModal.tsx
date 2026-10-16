@@ -90,7 +90,7 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
         <div className="p-6">
           {isSuccess ? (
             <div className="py-6 text-center space-y-3">
-              <CircleCheckBig className="w-12 h-12 text-[#B8577B] mx-auto" />
+              <CircleCheckBig className="w-12 h-12 text-[#8d3558] mx-auto" />
               <h4 className="text-lg font-bold text-[#302578]">
                 {lang === 'ar' ? (demoRequested() ? 'تمت محاكاة الطلب التجريبي' : (useWhatsApp?'تم تجهيز طلب الموعد في واتساب':'تم حفظ طلب الموعد')) : (demoRequested() ? 'Demo request simulated' : (useWhatsApp?'WhatsApp booking request prepared':'Booking Request Sent'))}
               </h4>
@@ -118,7 +118,7 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-bold text-[#66627b] mb-1">
-                    {t.contact.fields.fullName} <span className="text-[#B8577B]">*</span>
+                    {t.contact.fields.fullName} <span className="text-[#8d3558]">*</span>
                   </label>
                   <input id="calendarmodal-field-1"
                     type="text"
@@ -132,7 +132,7 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
 
                 <div>
                   <label htmlFor="calendarmodal-field-2" className="block text-xs font-bold text-[#66627b] mb-1">
-                    {t.contact.fields.companyName} <span className="text-[#B8577B]">*</span>
+                    {t.contact.fields.companyName} <span className="text-[#8d3558]">*</span>
                   </label>
                   <input id="calendarmodal-field-2"
                     type="text"
@@ -148,7 +148,7 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="calendarmodal-field-3" className="block text-xs font-bold text-[#66627b] mb-1">
-                    {t.contact.fields.phone} <span className="text-[#B8577B]">*</span>
+                    {t.contact.fields.phone} <span className="text-[#8d3558]">*</span>
                   </label>
                   <input id="calendarmodal-field-3"
                     type="tel"

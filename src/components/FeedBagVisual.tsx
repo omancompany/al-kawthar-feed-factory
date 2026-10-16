@@ -71,9 +71,9 @@ export const FeedBagVisual: React.FC<FeedBagVisualProps> = ({
 
           {/* Product Title */}
           <div className="py-1">
-            <h4 className="text-[#1E255E] text-xl sm:text-2xl font-black tracking-tight leading-tight">
+            <p className="text-[#1E255E] text-xl sm:text-2xl font-black tracking-tight leading-tight">
               علف متعدد الإستعمالات
-            </h4>
+            </p>
             <div className="text-[#1E255E] text-sm sm:text-base font-extrabold tracking-wide mt-0.5">
               General Ruminant
             </div>

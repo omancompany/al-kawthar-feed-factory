@@ -53,7 +53,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
           {/* Top color bar */}
           <div className="h-2 w-full flex">
             <div className="w-1/2 bg-[#302578]" />
-            <div className="w-1/4 bg-[#B8577B]" />
+            <div className="w-1/4 bg-[#8d3558]" />
             <div className="w-1/4 bg-[#16A34A]" />
           </div>
 
@@ -67,7 +67,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
             <div className="lg:col-span-7 text-start space-y-6">
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF5F7] text-[#302578] text-xs font-bold mb-2 border border-[#EBDCF0]">
-                  <Sparkles className="w-3.5 h-3.5 text-[#B8577B]" />
+                  <Sparkles className="w-3.5 h-3.5 text-[#8d3558]" />
                   <span>
                     {lang === 'ar'
                       ? 'العلامة التجارية: أعلاف الكوثر'
@@ -87,7 +87,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFF5F7] border border-[#F0E2F3] shadow-2xs">
                   <Building2 className="w-5 h-5 text-[#302578] shrink-0" />
                   <div>
-                    <div className="text-[11px] text-[#827b98] font-medium">
+                    <div className="text-[11px] text-[#65566f] font-medium">
                       {lang === 'ar' ? 'جهة الإنتاج' : 'Produced By'}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-[#302578]">
@@ -97,9 +97,9 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                 </div>
 
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFF5F7] border border-[#F0E2F3] shadow-2xs">
-                  <MapPin className="w-5 h-5 text-[#B8577B] shrink-0" />
+                  <MapPin className="w-5 h-5 text-[#8d3558] shrink-0" />
                   <div>
-                    <div className="text-[11px] text-[#827b98] font-medium">
+                    <div className="text-[11px] text-[#65566f] font-medium">
                       {lang === 'ar' ? 'الموقع' : 'Location'}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-[#302578]">
@@ -111,7 +111,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFF5F7] border border-[#F0E2F3] shadow-2xs">
                   <Scale className="w-5 h-5 text-[#302578] shrink-0" />
                   <div>
-                    <div className="text-[11px] text-[#827b98] font-medium">
+                    <div className="text-[11px] text-[#65566f] font-medium">
                       {lang === 'ar' ? 'الوزن والتعبئة' : 'Net Weight'}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-[#302578]">
@@ -121,9 +121,9 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                 </div>
 
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-[#FFF5F7] border border-[#F0E2F3] shadow-2xs">
-                  <Clock className="w-5 h-5 text-[#B8577B] shrink-0" />
+                  <Clock className="w-5 h-5 text-[#8d3558] shrink-0" />
                   <div>
-                    <div className="text-[11px] text-[#827b98] font-medium">
+                    <div className="text-[11px] text-[#65566f] font-medium">
                       {lang === 'ar' ? 'صلاحية المنتج' : 'Shelf Life'}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-[#302578]">
@@ -136,7 +136,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
               {/* Storage & Animals Box */}
               <div className="p-4 rounded-xl bg-[#FFF5F7] border border-[#EBDCF0] text-xs sm:text-sm text-[#66627b] space-y-2">
                 <div className="flex items-center gap-2 font-bold text-[#302578]">
-                  <SunMedium className="w-4 h-4 text-[#B8577B]" />
+                  <SunMedium className="w-4 h-4 text-[#8d3558]" />
                   <span>{t.products.storage}</span>
                 </div>
                 <div className="text-[#66627b]">
@@ -145,7 +145,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                   </span>
                   {t.products.targetAnimals}
                 </div>
-                <div className="text-[#827b98] font-mono text-xs pt-2 border-t border-[#EBDCF0] flex items-center justify-between">
+                <div className="text-[#65566f] font-mono text-xs pt-2 border-t border-[#EBDCF0] flex items-center justify-between">
                   <span>{t.products.bagDimensions}</span>
                   <span className="text-[#302578] font-bold">{t.products.customerService}</span>
                 </div>
@@ -158,7 +158,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                     key={index}
                     className="flex items-start gap-3 text-[#66627b] text-xs sm:text-sm leading-relaxed"
                   >
-                    <div className="w-5 h-5 rounded-full bg-pink-100 text-[#B8577B] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-pink-100 text-[#8d3558] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span>{detail}</span>
@@ -171,7 +171,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                 <button
                   id="product-inquire-cta-btn"
                   onClick={onOpenInquiryModal}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-gradient-to-r from-[#302578] to-[#B8577B] hover:from-[#251b63] hover:to-[#302578] shadow-md shadow-pink-200/50 transition-all hover:scale-[1.02] active:scale-[0.99]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white bg-gradient-to-r from-[#302578] to-[#8d3558] hover:from-[#251b63] hover:to-[#302578] shadow-md shadow-pink-200/50 transition-all hover:scale-[1.02] active:scale-[0.99]"
                 >
                   <span>{t.products.cta}</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -181,7 +181,7 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({
                   onClick={onOpenInquiryModal}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-[#302578] bg-white hover:bg-[#FFF5F7] border border-[#EBDCF0] shadow-2xs transition-colors"
                 >
-                  <FileSpreadsheet className="w-4 h-4 text-[#B8577B]" />
+                  <FileSpreadsheet className="w-4 h-4 text-[#8d3558]" />
                   <span>{t.products.ctaQuote}</span>
                 </button>
               </div>
