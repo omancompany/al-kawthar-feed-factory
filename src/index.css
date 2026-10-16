@@ -103,7 +103,7 @@ section[id] { scroll-margin-top: 112px; }
 .trust-item { display: flex; align-items: flex-start; gap: 14px; }
 .trust-icon { color: #9b4671; background: #faf4f6; border-radius: 12px; padding: 12px; flex-shrink: 0; }
 .trust-item h3 { color: #353047; font-size: 14px; font-weight: 800; margin-bottom: 7px; }
-.trust-item p { font-size: 11px; line-height: 1.9; color: #88818b; }
+.trust-item p { font-size: 11px; line-height: 1.9; color: #655d69; }
 #about, #products, #quality, #b2b, #contact { padding-block: 90px; }
 #about h2, #products h2, #quality h2, #b2b h2, #contact h2 { line-height: 1.5; }
 #confirmed-product-card { box-shadow: 0 18px 60px #39283f08; border-color: #e6dedf; }
@@ -180,12 +180,12 @@ section[id] { scroll-margin-top: 112px; }
 .utility-bar { background: #302578; }
 .site-header { background: #fffafbf5; }
 .hero-eyebrow, .hero-assurances svg, .trust-icon { color: #302578; }
-.hero-copy h1 > span { color: #b8577b; }
+.hero-copy h1 > span { color: #8d3558; }
 .brand-button { box-shadow: 0 6px 16px #30257818; }
 .brand-button:hover { background: #251b63; }
 .hero-showcase { background: #f3bdc9; border-color: #e9a9b9; }
 .showcase-orbit, .showcase-orbit::after { border-color: #30257824; }
-.showcase-topline, .showcase-caption small, .weight-label span { color: #655581; }
+.showcase-topline, .showcase-caption small, .weight-label span { color: #514165; }
 .weight-label { background: #fff8fa; color: #302578; }
 .trust-icon { background: #fff0f4; }
 .trust-item h3 { color: #302578; }
