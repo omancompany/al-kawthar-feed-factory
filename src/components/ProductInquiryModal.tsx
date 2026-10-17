@@ -107,13 +107,13 @@ export const ProductInquiryModal: React.FC<ProductInquiryModalProps> = ({
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
                 {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
-                <label htmlFor="productinquirymodal-field-1" className="flex items-start gap-2 text-xs leading-relaxed">
+                <label className="flex items-start gap-2 text-xs leading-relaxed">
                   <input type="checkbox" required className="mt-1" />
                   <span>{lang === 'ar' ? 'أوافق على حفظ بياناتي للتواصل بخصوص هذا الطلب. ' : 'I agree to store my details to respond to this request. '}<a href="/privacy.html" target="_blank" rel="noreferrer" className="underline">{lang === 'ar' ? 'الخصوصية' : 'Privacy'}</a></span>
                 </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-[#1E255E]/80 mb-1">
+                  <label htmlFor="productinquirymodal-field-1" className="block text-xs font-bold text-[#1E255E]/80 mb-1">
                     {t.contact.fields.fullName} <span className="text-[#302578]">*</span>
                   </label>
                   <input id="productinquirymodal-field-1"
@@ -142,6 +142,8 @@ export const ProductInquiryModal: React.FC<ProductInquiryModalProps> = ({
                 </div>
               </div>
 
+              <details className="rounded-xl border border-[#FAD3E1] p-3">
+                <summary className="cursor-pointer font-bold">{lang === 'ar' ? 'خيارات إضافية' : 'Additional options'}</summary>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="productinquirymodal-field-3" className="block text-xs font-bold text-[#1E255E]/80 mb-1">
@@ -170,6 +172,7 @@ export const ProductInquiryModal: React.FC<ProductInquiryModalProps> = ({
                 </div>
               </div>
 
+              </details>
               <div className="pt-3 flex flex-col sm:flex-row gap-3">
                 <button
                   type="submit" disabled={isSubmitting}
