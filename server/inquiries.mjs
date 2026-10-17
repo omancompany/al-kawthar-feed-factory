@@ -4,7 +4,7 @@ import { mkdirSync, chmodSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { randomUUID, timingSafeEqual } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import { trustImmediateProxy } from './trusted-proxy.mjs';
+import { trustImmediateProxy, resolveTrustedProxyAddresses } from './trusted-proxy.mjs';
 import { prepareNotificationStore } from './inquiry-notifications.mjs';
 
 const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -105,8 +105,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const {lookup}=await import('node:dns/promises');
   // In Compose only gateway is reachable by visitors. A changed gateway address
   // requires restarting this app; arbitrary forwarded headers are never trusted.
-  const trustedProxyAddresses=process.env.INQUIRY_TRUSTED_PROXY_IPS?.split(',').map(s=>s.trim())||
-   (process.env.NODE_ENV==='production'?(await lookup('gateway',{all:true})).map(a=>a.address):['127.0.0.1','::1']);
+  const trustedProxyAddresses=await resolveTrustedProxyAddresses({configured:process.env.INQUIRY_TRUSTED_PROXY_IPS,production:process.env.NODE_ENV==='production',lookup});
   const {app}=createInquiryApp({databasePath:process.env.INQUIRY_DATA_FILE,publicUrl:process.env.PUBLIC_URL,adminPassword:process.env.INQUIRY_ADMIN_PASSWORD,trustedProxyAddresses});
   app.listen(Number(process.env.PORT||3000),process.env.HOST||'127.0.0.1',()=>console.log('Sales website ready'));
 }
