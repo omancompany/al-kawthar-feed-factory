@@ -35,7 +35,7 @@ export const FeedBagVisual: React.FC<FeedBagVisualProps> = ({
               أعــــلاف
             </div>
             <div className="w-28 sm:w-32 h-24 sm:h-28 relative flex flex-col items-center justify-center">
-              <span className="package-logo-image"><img src={`${import.meta.env.BASE_URL}assets/al-kawther-logo.png`} alt="شعار أعلاف الكوثر" /></span>
+              <span className="package-logo-image"><img src={`${import.meta.env.BASE_URL}assets/al-kawther-logo.webp`} alt="شعار أعلاف الكوثر" /></span>
             </div>
           </div>
 

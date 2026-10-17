@@ -255,24 +255,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white"
                       />
                     </div>
-
-                    <div>
-                      <label htmlFor="companyName" className="block text-xs font-bold text-[#66627b] mb-1">
-                        {t.contact.fields.companyName} <span className="text-[#8d3558]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        id="companyName"
-                        required
-                        value={formData.companyName}
-                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
-                        placeholder={t.contact.fields.companyNamePlaceholder}
-                        className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="phone" className="block text-xs font-bold text-[#66627b] mb-1">
                         {t.contact.fields.phone} <span className="text-[#8d3558]">*</span>
@@ -288,7 +270,37 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         dir="ltr"
                       />
                     </div>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-bold text-[#66627b] mb-1">
+                      {t.contact.fields.message}
+                    </label>
+                    <textarea
+                      id="message"
+                      rows={3}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder={t.contact.fields.messagePlaceholder}
+                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white resize-y"
+                    />
+                  </div>
 
+                  <details className="rounded-xl border border-[#E5D7E8] p-3">
+                    <summary className="cursor-pointer font-bold">{lang === 'ar' ? 'خيارات إضافية' : 'Additional options'}</summary>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div>
+                      <label htmlFor="companyName" className="block text-xs font-bold text-[#66627b] mb-1">
+                        {t.contact.fields.companyName}
+                      </label>
+                      <input
+                        type="text"
+                        id="companyName"
+                        value={formData.companyName}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                        placeholder={t.contact.fields.companyNamePlaceholder}
+                        className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white"
+                      />
+                    </div>
                     <div>
                       <label htmlFor="email" className="block text-xs font-bold text-[#66627b] mb-1">
                         {t.contact.fields.email}
@@ -302,9 +314,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white"
                       />
                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="businessType" className="block text-xs font-bold text-[#66627b] mb-1">
                         {t.contact.fields.businessType} <span className="text-[#8d3558]">*</span>
@@ -327,7 +336,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         <option value="other">{t.contact.fields.businessTypes.other}</option>
                       </select>
                     </div>
-
                     <div>
                       <label htmlFor="quantity" className="block text-xs font-bold text-[#66627b] mb-1">
                         {t.contact.fields.quantity}
@@ -341,22 +349,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
                         className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white"
                       />
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-xs font-bold text-[#66627b] mb-1">
-                      {t.contact.fields.message}
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={3}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder={t.contact.fields.messagePlaceholder}
-                      className="w-full px-3.5 py-2.5 text-sm rounded-xl border border-[#E5D7E8] focus:border-[#302578] focus:ring-2 focus:ring-purple-100 outline-none transition-all text-[#302578] bg-white resize-y"
-                    />
-                  </div>
-
+                    </div>
+                  </details>
                   <div className="pt-2">
                     <button
                       type="submit"

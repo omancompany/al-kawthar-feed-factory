@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRight, ArrowDown, MapPin, Wheat, ShieldCheck } from 'lucide-react';
+import { contact, whatsappUrl } from '../contact-config';
 import { translations } from '../data/translations';
 import { FeedBagVisual } from './FeedBagVisual';
 
@@ -25,6 +26,10 @@ export function Hero({ lang, onNavigate, onOpenConsultationModal }: HeroProps) {
           <div className="hero-actions">
             <button id="hero-primary-cta" className="brand-button" onClick={() => onNavigate('contact')}>{t.hero.primaryCta}<Arrow size={18} /></button>
             <button id="hero-secondary-cta" className="outline-button" onClick={() => onNavigate('products')}>{t.hero.secondaryCta}<ArrowDown size={17} /></button>
+          </div>
+          <div className="hero-contact-links">
+            <a href={`tel:+${contact.phone}`}>{ar ? 'اتصل بنا' : 'Call us'}</a>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">{ar ? 'واتساب' : 'WhatsApp'}</a>
           </div>
           <div className="hero-assurances">
             <span><ShieldCheck size={18} />{ar ? 'جودة في كل عبوة' : 'Quality in every bag'}</span>
