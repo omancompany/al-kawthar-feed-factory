@@ -16,3 +16,12 @@ tmp
 output
 
 !**/.env.example
+
+# Keep local operations and acceptance material out of application images
+/infra
+.local
+**/.local
+playwright-report
+test-results
+docs/PRODUCTION-READINESS.md
+/docs/*.pdf
