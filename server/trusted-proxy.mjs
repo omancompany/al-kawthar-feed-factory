@@ -6,3 +6,13 @@ export function trustImmediateProxy(addresses){
  const trusted=new Set(addresses.map(normalize));
  return (address,hop)=>hop===0&&trusted.has(normalize(address));
 }
+
+// Empty configuration means automatic Compose gateway discovery, not an empty IP.
+export async function resolveTrustedProxyAddresses({configured,production=false,lookup}){
+ const explicit=(configured||'').split(',').map(value=>value.trim()).filter(Boolean);
+ if(explicit.length){trustImmediateProxy(explicit);return explicit;}
+ if(!production)return ['127.0.0.1','::1'];
+ const addresses=(await lookup('gateway',{all:true})).map(entry=>entry.address);
+ trustImmediateProxy(addresses); // Empty/invalid DNS answers fail closed.
+ return addresses;
+}
