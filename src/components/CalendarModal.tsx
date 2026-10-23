@@ -113,7 +113,7 @@ export const CalendarModal: React.FC<CalendarModalProps> = ({
                 {error && <p role="alert" className="text-sm text-red-700">{error}</p>}
                 <label htmlFor="calendarmodal-field-1" className="flex items-start gap-2 text-xs leading-relaxed">
                   <input type="checkbox" required className="mt-1" />
-                  <span>{lang === 'ar' ? 'أوافق على حفظ بياناتي للتواصل بخصوص هذا الطلب. ' : 'I agree to store my details to respond to this request. '}<a href="/privacy.html" target="_blank" rel="noreferrer" className="underline">{lang === 'ar' ? 'الخصوصية' : 'Privacy'}</a></span>
+                  <span>{lang === 'ar' ? 'أوافق على حفظ بياناتي للتواصل بخصوص هذا الطلب. ' : 'I agree to store my details to respond to this request. '}<a href={`${import.meta.env.BASE_URL}privacy.html`} target="_blank" rel="noreferrer" className="underline">{lang === 'ar' ? 'الخصوصية' : 'Privacy'}</a></span>
                 </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>

@@ -28,8 +28,8 @@ export function Hero({ lang, onNavigate, onOpenConsultationModal }: HeroProps) {
             <button id="hero-secondary-cta" className="outline-button" onClick={() => onNavigate('products')}>{t.hero.secondaryCta}<ArrowDown size={17} /></button>
           </div>
           <div className="hero-contact-links">
-            <a href={`tel:+${contact.phone}`}>{ar ? 'اتصل بنا' : 'Call us'}</a>
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">{ar ? 'واتساب' : 'WhatsApp'}</a>
+            {contact.phone && <a href={`tel:+${contact.phone}`}>{ar ? 'اتصل بنا' : 'Call us'}</a>}
+            {contact.whatsapp && <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">{ar ? 'واتساب' : 'WhatsApp'}</a>}
           </div>
           <div className="hero-assurances">
             <span><ShieldCheck size={18} />{ar ? 'جودة في كل عبوة' : 'Quality in every bag'}</span>

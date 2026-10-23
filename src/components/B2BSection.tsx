@@ -1,4 +1,4 @@
-import {whatsappUrl} from '../contact-config';
+import {contact,whatsappUrl} from '../contact-config';
 import React from 'react';
 import { translations } from '../data/translations';
 import {
@@ -205,7 +205,7 @@ export const B2BSection: React.FC<B2BSectionProps> = ({
             </button>
             <button
               id="b2b-contact-cta-btn"
-              onClick={() => window.open(whatsappUrl + '?text=' + encodeURIComponent(lang === 'ar' ? 'استفسار عن توريد الأعلاف' : 'Feed supply inquiry'), '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open((contact.whatsapp ? whatsappUrl : 'mailto:'+contact.email) + (contact.whatsapp ? '?text=' : '?body=') + encodeURIComponent(lang === 'ar' ? 'استفسار عن توريد الأعلاف' : 'Feed supply inquiry'), '_blank', 'noopener,noreferrer')}
               className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-xs sm:text-sm text-[#302578] bg-[#FFF2F6] hover:bg-[#FFE6EE] border border-[#FAD3E1] transition-colors"
             >
               <Mail className="w-4 h-4 text-[#302578]" />
