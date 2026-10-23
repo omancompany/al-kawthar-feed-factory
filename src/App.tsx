@@ -1,3 +1,4 @@
+import {contact} from './contact-config';
 import { DemoBar, DemoUnavailable, demoRequested, demoEnabled, blockDemoExternal } from './demo-preview';
 /**
  * @license
@@ -54,6 +55,9 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const publicContactOnly = contact.inquiryChannel === 'unavailable';
+  const openInquiry = () => publicContactOnly ? handleNavigate('contact') : setIsInquiryModalOpen(true);
+  const openCalendar = () => publicContactOnly ? handleNavigate('contact') : setIsCalendarModalOpen(true);
   const toggleLang = () => {
     setLang((prev) => (prev === 'ar' ? 'en' : 'ar'));
   };
@@ -84,31 +88,31 @@ export default function App() {
         <Hero
           lang={lang}
           onNavigate={handleNavigate}
-          onOpenConsultationModal={() => setIsCalendarModalOpen(true)}
+          onOpenConsultationModal={openCalendar}
         />
         <TrustIndicators lang={lang} />
         <AboutSection lang={lang} onNavigate={handleNavigate} />
         <ProductsSection
           lang={lang}
-          onOpenInquiryModal={() => setIsInquiryModalOpen(true)}
+          onOpenInquiryModal={openInquiry}
         />
         <QualitySection lang={lang} />
         <B2BSection
           lang={lang}
-          onOpenConsultationModal={() => setIsCalendarModalOpen(true)}
+          onOpenConsultationModal={openCalendar}
           onNavigateContact={() => handleNavigate('contact')}
         />
-        <ContactSection lang={lang} />
+        {publicContactOnly ? <section id="contact" className="mx-auto w-full max-w-5xl px-6 py-16"><h2 className="text-3xl font-bold">{lang==='ar'?'تواصل معنا':'Contact us'}</h2><p className="my-5">{lang==='ar'?contact.addressAr:contact.addressEn}</p><a className="font-bold underline" href={'mailto:'+contact.email}><bdi>{contact.email}</bdi></a></section> : <ContactSection lang={lang} />}
       </main>
 
       <Footer lang={lang} onNavigate={handleNavigate} />
 
-      <ChatbotWidget
+      {!publicContactOnly && <ChatbotWidget
         lang={lang}
-        onOpenInquiryModal={() => setIsInquiryModalOpen(true)}
-        onOpenCalendarModal={() => setIsCalendarModalOpen(true)}
+        onOpenInquiryModal={openInquiry}
+        onOpenCalendarModal={openCalendar}
         onNavigateContact={() => handleNavigate('contact')}
-      />
+      />}
 
       <ProductInquiryModal
         isOpen={isInquiryModalOpen}
